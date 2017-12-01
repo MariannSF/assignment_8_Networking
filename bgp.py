@@ -88,14 +88,14 @@ class SimpleTopo(Topo):
             self.addLink('R%d' % (i+1), 'R%d' % (i+2))
             '''
         #Adding the links per the topo in example 1A
-        self.addLink('R1', 'R2')
+        '''self.addLink('R1', 'R2')
         self.addLink('R1', 'R3')
         self.addLink('R2', 'R3')
         self.addLink('R2', 'R4')
         self.addLink('R2', 'R5')
         self.addLink('R3', 'R4')
         self.addLink('R3', 'R5')
-        self.addLink('R4', 'R5')
+        self.addLink('R4', 'R5')'''
         #self.addLink('R5', 'R6')
 
         #Maybe change R4 to R6 here 11272017
@@ -106,6 +106,14 @@ class SimpleTopo(Topo):
             hosts.append(host)
             self.addLink('R6', hostname)
         # This MUST be added at the end
+        self.addLink('R1', 'R2')
+        self.addLink('R1', 'R3')
+        self.addLink('R2', 'R3')
+        self.addLink('R2', 'R4')
+        self.addLink('R2', 'R5')
+        self.addLink('R3', 'R4')
+        self.addLink('R3', 'R5')
+        self.addLink('R4', 'R5')
         self.addLink('R5', 'R6')
         return
 

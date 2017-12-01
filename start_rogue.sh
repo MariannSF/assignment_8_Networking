@@ -5,5 +5,4 @@ echo "Killing any existing rogue AS"
 
 echo "Starting rogue AS"
 sudo python run.py --node R6 --cmd "/usr/lib/quagga/zebra -f conf/zebra-R6.conf -d -i /tmp/zebra-R6.pid > logs/R6-zebra-stdout"
-#edited R4 to R6
 sudo python run.py --node R6 --cmd "/usr/lib/quagga/bgpd -f conf/bgpd-R6.conf -d -i /tmp/bgpd-R6.pid > logs/R6-bgpd-stdout"
